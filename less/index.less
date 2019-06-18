@@ -57,3 +57,28 @@ html, body {
     height: 100%;
 }
 
+@havelockBlue: #52A7E0;
+@maincolor: @havelockBlue;
+
+@jungleGreen: #1E3231;
+@textcolor: @jungleGreen;
+
+
+
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	
+	nav {
+	display: flex;
+	justify-content: space-around;
+	padding: 15px 2%;
+	background-color: @maincolor;
+
+		a {
+		text-decoration: none;
+		color: @textcolor;
+		}
+	}
+}

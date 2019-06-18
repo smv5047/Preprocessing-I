@@ -134,7 +134,17 @@ html,
 body {
   height: 100%;
 }
-
-body {
-  background-color: red;
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.container nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 2%;
+  background-color: #52A7E0;
+}
+.container nav a {
+  text-decoration: none;
+  color: #1E3231;
 }
