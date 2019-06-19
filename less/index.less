@@ -54,21 +54,62 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+
+// Variables //
 @havelockBlue: #52A7E0;
 @maincolor: @havelockBlue;
 
 @jungleGreen: #1E3231;
 @textcolor: @jungleGreen;
 
+@steel: #485665;
+@bordercolor: @steel;
 
+@lightgreen: #cddddd;
+@backgroundcolor: @lightgreen;
 
+//Mix-ins //
+
+.standardflex() {
+	display: flex;
+	width: 100%;
+}
+
+.tablemix() {
+	padding: 5px 2%;
+	text-align: center;
+	border: 2px solid @bordercolor;
+}
+
+// Universal Styles //
+
+h3 {
+	font-size: 3rem;
+}
+
+h5 {
+	font-size: 2.5rem;
+}
+
+a, p {
+	font-size: 1.5rem;
+}
 
 .container {
-	width: 800px;
+	max-width: 800px;
 	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		max-width: 500px;
+	}
 	
 	nav {
 	display: flex;
@@ -81,4 +122,123 @@ html, body {
 		color: @textcolor;
 		}
 	}
+}
+
+.banner.top{
+	.standardflex();
+	justify-content: space-between;
+	background: @backgroundcolor;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+
+	.banner-img {
+		max-width: 50%;
+		height: auto;
+		padding: 25px 5%;
+
+		@media (max-width: 500px) {
+			padding: 50px 10%;
+			object-fit: cover;
+			
+		}
+	}
+
+	.banner-txt {
+		margin-left: 10%;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+	}
+
+}
+
+button {
+	margin-left: 43%;
+	margin-top: 30px;
+	padding: 10px 2%;
+	border-radius: 5px;
+	background: @maincolor;
+	font-size: 1.5rem;
+	box-shadow: 20px;
+
+	:hover{
+		color: white;
+		transition: .25s ease-in;
+		
+	}
+
+	a {
+		text-decoration: none;
+		color: @textcolor;
+	}
+}
+
+.banner.middle {
+	.standardflex();
+	margin: 30px 0;
+	height: 200px;
+	justify-content: space-around;
+	background: @backgroundcolor;
+
+	.banner-txt {
+		padding: 20px 0;
+		width: 40%;
+	}
+
+	.banner-list{
+		padding: 20px 0;
+		font-size: 1.5rem;
+
+		ul {
+			list-style-type: square;
+		}
+
+		li:first-child {
+			font-size: 2.5rem;
+			list-style-type: none;
+			padding: 10%;
+		}
+	}
+}
+
+
+.banner.bottom {
+	width: 100%;
+
+	h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		color: @bordercolor;
+		padding: 20px 0;
+	}
+
+	table {
+		width: 100%;
+		font-size: 1.5rem;
+		border: 2px solid @bordercolor;
+		color: @textcolor;
+
+		tr{
+			border: 2px solid @bordercolor;
+			color: @textcolor;
+
+			th {
+				font-size: 2rem;
+				color: @maincolor;
+				.tablemix();
+			}
+			td {
+				color: @textcolor;
+				.tablemix();
+			}
+		}
+	}
+}
+
+
+footer {
+	text-align: center;
+	padding: 50px 0;
 }
