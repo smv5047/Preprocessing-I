@@ -1,1 +1,274 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+h3 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2.5rem;
+}
+a,
+p {
+  font-size: 1.5rem;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+.container nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 2%;
+  background-color: #52A7E0;
+}
+.container nav a {
+  text-decoration: none;
+  color: #1E3231;
+}
+.banner.top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #cddddd;
+}
+@media (max-width: 500px) {
+  .banner.top {
+    flex-direction: column;
+  }
+}
+.banner.top .banner-img {
+  max-width: 50%;
+  height: auto;
+  padding: 25px 5%;
+}
+@media (max-width: 500px) {
+  .banner.top .banner-img {
+    padding: 50px 10%;
+    object-fit: cover;
+  }
+}
+.banner.top .banner-txt {
+  margin-left: 10%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+button {
+  margin-left: 43%;
+  margin-top: 30px;
+  padding: 10px 2%;
+  border-radius: 5px;
+  background: #52A7E0;
+  font-size: 1.5rem;
+  box-shadow: 20px;
+}
+button :hover {
+  color: white;
+  transition: 0.25s ease-in;
+}
+button a {
+  text-decoration: none;
+  color: #1E3231;
+}
+.banner.middle {
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+  height: 200px;
+  justify-content: space-around;
+  background: #cddddd;
+}
+.banner.middle .banner-txt {
+  padding: 20px 0;
+  width: 40%;
+}
+.banner.middle .banner-list {
+  padding: 20px 0;
+  font-size: 1.5rem;
+}
+.banner.middle .banner-list ul {
+  list-style-type: square;
+}
+.banner.middle .banner-list li:first-child {
+  font-size: 2.5rem;
+  list-style-type: none;
+  padding: 10%;
+}
+.banner.bottom {
+  width: 100%;
+}
+.banner.bottom h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #485665;
+  padding: 20px 0;
+}
+.banner.bottom table {
+  width: 100%;
+  font-size: 1.5rem;
+  border: 2px solid #485665;
+  color: #1E3231;
+}
+.banner.bottom table tr {
+  border: 2px solid #485665;
+  color: #1E3231;
+}
+.banner.bottom table tr th {
+  font-size: 2rem;
+  color: #52A7E0;
+  padding: 5px 2%;
+  text-align: center;
+  border: 2px solid #485665;
+}
+.banner.bottom table tr td {
+  color: #1E3231;
+  padding: 5px 2%;
+  text-align: center;
+  border: 2px solid #485665;
+}
+footer {
+  text-align: center;
+  padding: 50px 0;
+}
